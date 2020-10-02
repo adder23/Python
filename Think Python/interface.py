@@ -26,12 +26,20 @@ def arc(t,r,angle):
     step_angle = float(angle) / n
     polyline(t,step_length,n,step_angle)
 
+def flower(t, n):
+    angle =150
+    r =75
+    for i in range(n):
+        arc(t, r, angle)
+        t.lt(105)
+    
 bob = turtle.Turtle()
 
 #square(bob, 200)
 #polygon(bob,150,5)
 #circle(bob,50)
 #arc(bob,50,360)
+flower(bob, 7)
 
 print(bob)
 turtle.mainloop()
