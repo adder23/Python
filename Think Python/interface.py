@@ -27,11 +27,14 @@ def arc(t,r,angle):
     polyline(t,step_length,n,step_angle)
 
 def flower(t, n):
-    angle =150
-    r =75
+    angle =360/n
+    r =100
+
     for i in range(n):
         arc(t, r, angle)
-        t.lt(105)
+        t.lt(128)
+        arc(t, r, angle)
+        t.rt(177)
     
 bob = turtle.Turtle()
 
@@ -44,4 +47,4 @@ flower(bob, 7)
 print(bob)
 turtle.mainloop()
 
-#okay this is what I wrote after reading the examples now that I've read ahead I will rewrite my code in my next session, Damn the incoming tasks do require some amount of math, don't they ?
+#okay now at least draws a flower when using 7 leafs it's an improvement from before
